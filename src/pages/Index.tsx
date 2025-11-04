@@ -64,34 +64,44 @@ const Index = () => {
 
             <div className="border-t border-muted my-8"></div>
 
-            <section className="space-y-6 animate-fade-in-up">
-              <h2 className="text-2xl font-serif font-light text-center tracking-wide">
+            <section className="space-y-6 animate-fade-in-up relative">
+              <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none overflow-hidden">
+                <p className="text-9xl font-script whitespace-nowrap">I love you</p>
+              </div>
+              <h2 className="text-2xl font-serif font-light text-center tracking-wide relative z-10">
                 ДОРОГИЕ НАШИ<br />ДРУЗЬЯ И РОДНЫЕ!
               </h2>
-              <p className="text-sm text-center leading-relaxed text-muted-foreground">
-                Это официальное приглашение на нашу свадьбу! А получили Вы его потому, 
-                что мы очень хотим видеть вас в этот день рядом с нами!
+              <p className="text-sm text-center leading-relaxed text-muted-foreground relative z-10">
+                Этот день в этом году будет самым особенным и счастливым рядом для нас.<br/><br/>
+                А потому мы<br/>
+                с любовью надеемся увидеть вас!
               </p>
             </section>
 
-            <section className="space-y-6 animate-fade-in-up">
-              <h3 className="text-xl font-script text-accent text-center">Август, 2026</h3>
-              <div className="bg-secondary/30 p-6 rounded-lg">
-                <div className="grid grid-cols-7 gap-2 text-center">
-                  <div className="text-xs text-muted-foreground">ПН</div>
-                  <div className="text-xs text-muted-foreground">ВТ</div>
-                  <div className="text-xs text-muted-foreground">СР</div>
-                  <div className="text-xs text-muted-foreground">ЧТ</div>
-                  <div className="text-xs text-muted-foreground">ПТ</div>
-                  <div className="text-xs text-muted-foreground">СБ</div>
-                  <div className="text-xs text-muted-foreground">ВС</div>
-                  
-                  {[...Array(31)].map((_, i) => (
+            <section className="space-y-6 animate-fade-in-up relative">
+              <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none overflow-hidden">
+                <p className="text-9xl font-script whitespace-nowrap">I love you</p>
+              </div>
+              <h3 className="text-2xl font-script text-accent text-center relative z-10">Июнь, 2025</h3>
+              <div className="relative z-10">
+                <div className="flex justify-center gap-3">
+                  {[10, 11, 12, 13, 14].map((day) => (
                     <div 
-                      key={i} 
-                      className={`text-sm py-1 ${i + 1 === 22 ? 'bg-accent text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto' : ''}`}
+                      key={day}
+                      className={`relative ${
+                        day === 12 
+                          ? 'w-16 h-20' 
+                          : 'w-12 h-12 border border-muted rounded-lg flex items-center justify-center'
+                      }`}
                     >
-                      {i + 1}
+                      {day === 12 ? (
+                        <div className="relative w-full h-full flex items-center justify-center">
+                          <Icon name="Heart" className="w-16 h-16 text-accent fill-accent" />
+                          <span className="absolute text-white font-medium text-lg">{day}</span>
+                        </div>
+                      ) : (
+                        <span className="text-sm text-muted-foreground">{day}</span>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -110,8 +120,11 @@ const Index = () => {
                 </h2>
               </div>
 
-              <div className="space-y-6">
-                <div className="text-center">
+              <div className="space-y-6 relative">
+                <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none overflow-hidden">
+                  <p className="text-9xl font-script whitespace-nowrap">I love you</p>
+                </div>
+                <div className="text-center relative z-10">
                   <h3 className="text-xl font-serif mb-4">Место проведения</h3>
                   <p className="text-sm font-light mb-2">Панорамное кафе Верталетка</p>
                   <Button 
@@ -124,25 +137,22 @@ const Index = () => {
 
                 <div className="border-t border-muted my-8"></div>
 
-                <div className="space-y-4">
-                  <h3 className="text-xl font-serif text-center mb-6">ПЛАН ДНЯ</h3>
+                <div className="space-y-6 relative z-10">
+                  <h3 className="text-xl font-serif text-center mb-6">ДЕТАЛИ...</h3>
                   
                   {[
-                    { time: '12:00', title: 'Сбор гостей', desc: 'Панорамное кафе Верталетка' },
-                    { time: '14:30', title: 'Церемония', desc: 'Торжественная часть' },
-                    { time: '17:00', title: 'Банкет', desc: 'Ужин и танцы до утра' }
+                    { time: '12:00', title: 'СБОР', desc: 'Ожид вас, торт пройт мимо, мы не будем' },
+                    { time: '14:30', title: 'ЦЕРЕМОНИЯ', desc: 'Обмен клятвами и поздравления гостей' },
+                    { time: '17:00', title: 'БАНКЕТ', desc: 'Ужин, танцы и веселье до утра' },
+                    { time: '21:30', title: 'ОКОНЧАНИЕ', desc: 'Бол вам не больна услуга закончился' }
                   ].map((event, i) => (
-                    <div key={i} className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-16 text-right">
-                        <span className="text-sm font-light">{event.time}</span>
+                    <div key={i} className="text-center space-y-1">
+                      <div className="flex justify-center items-center gap-2">
+                        <Icon name="Heart" size={14} className="text-accent" />
                       </div>
-                      <div className="flex-shrink-0">
-                        <Icon name="Heart" size={16} className="text-accent mt-1" />
-                      </div>
-                      <div className="flex-1">
-                        <p className="font-medium text-sm">{event.title}</p>
-                        <p className="text-xs text-muted-foreground">{event.desc}</p>
-                      </div>
+                      <h4 className="font-serif text-lg tracking-wider">{event.title}</h4>
+                      <p className="text-2xl font-light">{event.time}</p>
+                      <p className="text-xs text-muted-foreground leading-relaxed max-w-xs mx-auto">{event.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -151,10 +161,30 @@ const Index = () => {
 
             <div className="border-t border-muted my-8"></div>
 
-            <section className="space-y-6 animate-fade-in-up">
-              <h2 className="text-xl font-script text-accent text-center">Дресс-код</h2>
+            <section className="space-y-6 animate-fade-in-up relative">
+              <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none overflow-hidden">
+                <p className="text-9xl font-script whitespace-nowrap">I love you</p>
+              </div>
+              <h2 className="text-xl font-script text-accent text-center relative z-10">Дресс-код</h2>
               
-              <div className="space-y-6">
+              <div className="space-y-6 relative z-10">
+                <div className="text-center">
+                  <p className="text-sm mb-6">Буду рад, радость в классном свежем корпоратив состояла согреться торжества и уюта у всего 40.</p>
+                </div>
+                
+                <div className="text-center">
+                  <p className="text-sm mb-4 font-medium">Мы будем благо, дарьи и ниже и в день дерни запутую темного, сарафана.</p>
+                  <div className="flex justify-center gap-2 mt-4">
+                    {['#C8C8D0', '#FFB6C1', '#ADD8E6', '#F5DEB3'].map((color, i) => (
+                      <div 
+                        key={i}
+                        className="w-8 h-8 rounded-full border border-muted"
+                        style={{ backgroundColor: color }}
+                      ></div>
+                    ))}
+                  </div>
+                </div>
+
                 <div className="text-center">
                   <p className="text-sm mb-4">Для женщин — пастельные оттенки</p>
                   <div className="flex justify-center gap-2">
@@ -249,21 +279,25 @@ const Index = () => {
 
             <div className="border-t border-muted my-8"></div>
 
-            <section className="text-center space-y-6 animate-fade-in-up">
-              <h2 className="text-xl font-serif">До встречи!</h2>
-              <div className="grid grid-cols-4 gap-4 max-w-xs mx-auto">
+            <section className="text-center space-y-6 animate-fade-in-up relative">
+              <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none overflow-hidden">
+                <p className="text-9xl font-script whitespace-nowrap">I love you</p>
+              </div>
+              <h2 className="text-xl font-serif relative z-10">ЖДЕМ ВАС!</h2>
+              <p className="text-sm text-muted-foreground relative z-10">До скорой встречи!</p>
+              <div className="grid grid-cols-4 gap-3 max-w-xs mx-auto relative z-10">
                 {[
-                  { value: countdown.days, label: 'дней' },
-                  { value: countdown.hours, label: 'часов' },
-                  { value: countdown.minutes, label: 'минут' },
-                  { value: countdown.seconds, label: 'секунд' }
+                  { value: countdown.days, label: 'МЕСЯЦЫ' },
+                  { value: countdown.hours, label: 'ДНИ' },
+                  { value: countdown.minutes, label: 'ЧАСОВ' },
+                  { value: countdown.seconds, label: 'МИНУТ' }
                 ].map((item, i) => (
                   <div key={i} className="text-center">
-                    <div className="w-14 h-14 mx-auto bg-accent text-white rounded-full flex items-center justify-center mb-2">
-                      <Icon name="Heart" size={20} />
+                    <div className="w-12 h-12 mx-auto bg-accent text-white rounded-full flex items-center justify-center mb-2">
+                      <Icon name="Heart" size={18} />
                     </div>
-                    <div className="text-2xl font-light mb-1">{item.value}</div>
-                    <div className="text-xs text-muted-foreground uppercase">{item.label}</div>
+                    <div className="text-xl font-light mb-1">{item.value}</div>
+                    <div className="text-[10px] text-muted-foreground uppercase tracking-wide">{item.label}</div>
                   </div>
                 ))}
               </div>
