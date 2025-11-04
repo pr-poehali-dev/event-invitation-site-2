@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@100;200;300;400;500;600&family=Great+Vibes&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,33 +6,33 @@
 
 @layer base {
   :root {
-    --background: 32 25% 96%;
-    --foreground: 345 60% 15%;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 345 60% 15%;
+    --card-foreground: 0 0% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 345 60% 15%;
+    --popover-foreground: 0 0% 15%;
 
-    --primary: 345 75% 28%;
-    --primary-foreground: 32 25% 96%;
+    --primary: 0 0% 20%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 32 25% 96%;
-    --secondary-foreground: 345 60% 15%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 20%;
 
-    --muted: 32 15% 88%;
-    --muted-foreground: 345 20% 40%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 0 60% 45%;
-    --accent-foreground: 32 25% 96%;
+    --accent: 0 85% 55%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 32 15% 88%;
-    --input: 32 15% 88%;
-    --ring: 345 75% 28%;
+    --border: 0 0% 88%;
+    --input: 0 0% 92%;
+    --ring: 0 85% 55%;
 
     --radius: 0.5rem;
 
@@ -92,7 +92,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
 
   h1,
@@ -101,10 +101,16 @@
   h4,
   h5,
   h6 {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant", serif;
+    font-weight: 300;
+    letter-spacing: 0.05em;
   }
 
   .font-script {
-    font-family: "Dancing Script", cursive;
+    font-family: "Great Vibes", cursive;
+  }
+
+  .font-serif {
+    font-family: "Cormorant", serif;
   }
 }
