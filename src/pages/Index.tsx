@@ -39,281 +39,206 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F5F5] flex items-center justify-center p-4">
-      <div className="w-full max-w-md mx-auto">
-        <Card className="bg-white shadow-2xl overflow-hidden border-none">
-          <div className="p-8 md:p-12 space-y-12">
+    <div className="min-h-screen bg-gradient-to-b from-[#F5F1E8] to-[#EDE7DC] relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-64 h-64 opacity-40">
+        <img 
+          src="https://cdn.poehali.dev/files/e63b231a-87c4-41b1-be3e-1e2b03a0bb15.png"
+          alt=""
+          className="object-contain"
+        />
+      </div>
+      <div className="absolute top-0 right-0 w-64 h-64 opacity-40 transform scale-x-[-1]">
+        <img 
+          src="https://cdn.poehali.dev/files/e63b231a-87c4-41b1-be3e-1e2b03a0bb15.png"
+          alt=""
+          className="object-contain"
+        />
+      </div>
+      
+      <div className="relative z-10 flex items-center justify-center min-h-screen p-4">
+        <div className="w-full max-w-lg mx-auto">
+          <div className="space-y-16 py-12">
             
-            <section className="text-center space-y-6 animate-fade-in">
-              <div className="text-xs tracking-[0.3em] uppercase text-muted-foreground">
-                22 августа, 2026 | 12:00
-              </div>
-              <div className="space-y-2">
-                <h1 className="text-6xl md:text-7xl font-serif font-light tracking-wide">
-                  Вероника
-                </h1>
-                <div className="text-4xl font-light">&</div>
-                <h1 className="text-6xl md:text-7xl font-serif font-light tracking-wide">
-                  Руслан
-                </h1>
-              </div>
-              <div className="pt-4">
-                <p className="text-5xl font-script text-accent">I love you</p>
-              </div>
+            <section className="text-center space-y-8 animate-fade-in">
+              <h1 className="text-7xl md:text-8xl font-serif text-primary italic">
+                WEDDING<br/>DAY
+              </h1>
+              <p className="text-lg font-serif italic text-muted-foreground leading-relaxed">
+                Приглашаем Вас разделить<br/>
+                с нами праздник, посвящённый<br/>
+                дню нашей свадьбы 22.08.2026!
+              </p>
+              <p className="text-3xl font-script text-accent">all I need is you</p>
             </section>
 
-            <div className="border-t border-muted my-8"></div>
-
-            <section className="space-y-6 animate-fade-in-up relative">
-              <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none overflow-hidden">
-                <p className="text-9xl font-script whitespace-nowrap">I love you</p>
-              </div>
-              <h2 className="text-2xl font-serif font-light text-center tracking-wide relative z-10">
-                ДОРОГИЕ НАШИ<br />ДРУЗЬЯ И РОДНЫЕ!
+            <section className="text-center space-y-6 animate-fade-in-up">
+              <h2 className="text-5xl font-serif italic text-primary">
+                место<br/>проведения
               </h2>
-              <p className="text-sm text-center leading-relaxed text-muted-foreground relative z-10">
-                Этот день в этом году будет самым особенным и счастливым рядом для нас.<br/><br/>
-                А потому мы<br/>
-                с любовью надеемся увидеть вас!
+              <p className="text-xl font-serif italic text-muted-foreground">
+                Панорамное кафе Верталетка
               </p>
+              <div className="my-8">
+                <img 
+                  src="https://cdn.poehali.dev/files/23d32ef6-bdbf-40f0-ad77-fc54cc40938e.png"
+                  alt="Venue"
+                  className="w-full rounded-lg shadow-lg"
+                />
+              </div>
+              <p className="text-2xl font-script text-accent">our special day</p>
             </section>
 
-            <section className="space-y-6 animate-fade-in-up relative">
-              <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none overflow-hidden">
-                <p className="text-9xl font-script whitespace-nowrap">I love you</p>
-              </div>
-              <h3 className="text-2xl font-script text-accent text-center relative z-10">Июнь, 2025</h3>
-              <div className="relative z-10">
-                <div className="flex justify-center gap-3">
-                  {[10, 11, 12, 13, 14].map((day) => (
-                    <div 
-                      key={day}
-                      className={`relative ${
-                        day === 12 
-                          ? 'w-16 h-20' 
-                          : 'w-12 h-12 border border-muted rounded-lg flex items-center justify-center'
-                      }`}
-                    >
-                      {day === 12 ? (
-                        <div className="relative w-full h-full flex items-center justify-center">
-                          <Icon name="Heart" className="w-16 h-16 text-accent fill-accent" />
-                          <span className="absolute text-white font-medium text-lg">{day}</span>
-                        </div>
-                      ) : (
-                        <span className="text-sm text-muted-foreground">{day}</span>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            <div className="border-t border-muted my-8"></div>
-
-            <section className="space-y-8 animate-fade-in-up">
-              <div className="text-center">
-                <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-2">
-                  22 АВГУСТА, 2026 | 12:00
-                </p>
-                <h2 className="text-3xl font-script text-accent mb-8">
-                  I love you
-                </h2>
-              </div>
-
-              <div className="space-y-6 relative">
-                <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none overflow-hidden">
-                  <p className="text-9xl font-script whitespace-nowrap">I love you</p>
-                </div>
-                <div className="text-center relative z-10">
-                  <h3 className="text-xl font-serif mb-4">Место проведения</h3>
-                  <p className="text-sm font-light mb-2">Панорамное кафе Верталетка</p>
-                  <Button 
-                    variant="outline" 
-                    className="mt-4 border-accent text-accent hover:bg-accent hover:text-white"
-                  >
-                    Как добраться
-                  </Button>
-                </div>
-
-                <div className="border-t border-muted my-8"></div>
-
-                <div className="space-y-6 relative z-10">
-                  <h3 className="text-xl font-serif text-center mb-6">ДЕТАЛИ...</h3>
-                  
-                  {[
-                    { time: '12:00', title: 'СБОР', desc: 'Ожид вас, торт пройт мимо, мы не будем' },
-                    { time: '14:30', title: 'ЦЕРЕМОНИЯ', desc: 'Обмен клятвами и поздравления гостей' },
-                    { time: '17:00', title: 'БАНКЕТ', desc: 'Ужин, танцы и веселье до утра' },
-                    { time: '21:30', title: 'ОКОНЧАНИЕ', desc: 'Бол вам не больна услуга закончился' }
-                  ].map((event, i) => (
-                    <div key={i} className="text-center space-y-1">
-                      <div className="flex justify-center items-center gap-2">
-                        <Icon name="Heart" size={14} className="text-accent" />
-                      </div>
-                      <h4 className="font-serif text-lg tracking-wider">{event.title}</h4>
-                      <p className="text-2xl font-light">{event.time}</p>
-                      <p className="text-xs text-muted-foreground leading-relaxed max-w-xs mx-auto">{event.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            <div className="border-t border-muted my-8"></div>
-
-            <section className="space-y-6 animate-fade-in-up relative">
-              <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none overflow-hidden">
-                <p className="text-9xl font-script whitespace-nowrap">I love you</p>
-              </div>
-              <h2 className="text-xl font-script text-accent text-center relative z-10">Дресс-код</h2>
+            <section className="text-center space-y-8 animate-fade-in-up">
+              <h2 className="text-5xl font-serif italic text-primary">
+                дресс-код
+              </h2>
+              <p className="text-base font-serif italic text-muted-foreground leading-relaxed px-6">
+                Нам будет особенно приятно<br/>
+                видеть Вас в нарядах цветовой<br/>
+                гаммы нашей свадьбы.
+              </p>
               
-              <div className="space-y-6 relative z-10">
-                <div className="text-center">
-                  <p className="text-sm mb-6">Буду рад, радость в классном свежем корпоратив состояла согреться торжества и уюта у всего 40.</p>
-                </div>
-                
-                <div className="text-center">
-                  <p className="text-sm mb-4 font-medium">Мы будем благо, дарьи и ниже и в день дерни запутую темного, сарафана.</p>
-                  <div className="flex justify-center gap-2 mt-4">
-                    {['#C8C8D0', '#FFB6C1', '#ADD8E6', '#F5DEB3'].map((color, i) => (
-                      <div 
-                        key={i}
-                        className="w-8 h-8 rounded-full border border-muted"
-                        style={{ backgroundColor: color }}
-                      ></div>
-                    ))}
-                  </div>
-                </div>
+              <div className="flex justify-center gap-3 py-6">
+                {['#C8C8C8', '#696969', '#000000', '#5F7161', '#8A9A7B'].map((color, i) => (
+                  <div 
+                    key={i}
+                    className="w-14 h-14 rounded-full shadow-md"
+                    style={{ backgroundColor: color }}
+                  ></div>
+                ))}
+              </div>
 
-                <div className="text-center">
-                  <p className="text-sm mb-4">Для женщин — пастельные оттенки</p>
-                  <div className="flex justify-center gap-2">
-                    {['#FFE4E1', '#E6E6FA', '#F0E68C', '#FFE4CC'].map((color, i) => (
-                      <div 
-                        key={i}
-                        className="w-8 h-8 rounded-full border border-muted"
-                        style={{ backgroundColor: color }}
-                      ></div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="text-center">
-                  <p className="text-sm mb-4">Для мужчин — классика</p>
-                  <div className="flex justify-center gap-2">
-                    {['#000000', '#FFFFFF', '#1E3A8A', '#556B2F'].map((color, i) => (
-                      <div 
-                        key={i}
-                        className="w-8 h-8 rounded-full border border-muted"
-                        style={{ backgroundColor: color }}
-                      ></div>
-                    ))}
-                  </div>
-                </div>
+              <div className="grid grid-cols-2 gap-4 px-4">
+                <img 
+                  src="https://cdn.poehali.dev/files/7bf84bf9-00fd-4e6b-81cd-b5fab7b93d5f.png"
+                  alt="Dress code example"
+                  className="w-full h-64 object-cover rounded-lg shadow-md"
+                />
+                <img 
+                  src="https://cdn.poehali.dev/files/7bf84bf9-00fd-4e6b-81cd-b5fab7b93d5f.png"
+                  alt="Dress code example"
+                  className="w-full h-64 object-cover rounded-lg shadow-md"
+                />
               </div>
             </section>
 
-            <div className="border-t border-muted my-8"></div>
-
-            <section className="space-y-6 animate-fade-in-up">
-              <h2 className="text-xl font-script text-accent text-center">Анкета гостя</h2>
-              <p className="text-xs text-center text-muted-foreground">
-                Пожалуйста, подтвердите ваше<br />присутствие на нашей свадьбе до
-              </p>
-              <p className="text-center font-medium">10.06.2025</p>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Label className="text-xs uppercase tracking-wider">Ваше имя</Label>
-                  <Input
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="border-b border-t-0 border-l-0 border-r-0 rounded-none px-0 focus-visible:ring-0"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <Label className="text-xs uppercase tracking-wider block mb-3">
-                    Я буду присутствовать
-                  </Label>
-                  <div className="space-y-2">
-                    {['Да', 'Нет'].map((option) => (
-                      <label key={option} className="flex items-center gap-2 cursor-pointer">
-                        <div 
-                          onClick={() => setFormData({ ...formData, attending: option })}
-                          className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
-                            formData.attending === option ? 'border-accent' : 'border-muted'
-                          }`}
-                        >
-                          {formData.attending === option && (
-                            <div className="w-2.5 h-2.5 rounded-full bg-accent"></div>
-                          )}
-                        </div>
-                        <span className="text-sm">{option}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <Label className="text-xs uppercase tracking-wider">Количество гостей</Label>
-                  <Input
-                    type="number"
-                    min="1"
-                    value={formData.guests}
-                    onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                    className="border-b border-t-0 border-l-0 border-r-0 rounded-none px-0 focus-visible:ring-0"
-                    required
-                  />
-                </div>
-
-                <Button 
-                  type="submit"
-                  className="w-full bg-accent hover:bg-accent/90 text-white uppercase tracking-wider text-xs py-6"
-                >
-                  Подтвердить
-                </Button>
-              </form>
-            </section>
-
-            <div className="border-t border-muted my-8"></div>
-
-            <section className="text-center space-y-6 animate-fade-in-up relative">
-              <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none overflow-hidden">
-                <p className="text-9xl font-script whitespace-nowrap">I love you</p>
-              </div>
-              <h2 className="text-xl font-serif relative z-10">ЖДЕМ ВАС!</h2>
-              <p className="text-sm text-muted-foreground relative z-10">До скорой встречи!</p>
-              <div className="grid grid-cols-4 gap-3 max-w-xs mx-auto relative z-10">
+            <section className="text-center space-y-8 animate-fade-in-up">
+              <h2 className="text-5xl font-serif italic text-primary">
+                тайминг дня
+              </h2>
+              
+              <div className="space-y-6 px-8">
                 {[
-                  { value: countdown.days, label: 'МЕСЯЦЫ' },
-                  { value: countdown.hours, label: 'ДНИ' },
-                  { value: countdown.minutes, label: 'ЧАСОВ' },
-                  { value: countdown.seconds, label: 'МИНУТ' }
-                ].map((item, i) => (
-                  <div key={i} className="text-center">
-                    <div className="w-12 h-12 mx-auto bg-accent text-white rounded-full flex items-center justify-center mb-2">
-                      <Icon name="Heart" size={18} />
-                    </div>
-                    <div className="text-xl font-light mb-1">{item.value}</div>
-                    <div className="text-[10px] text-muted-foreground uppercase tracking-wide">{item.label}</div>
+                  { time: '12:00', title: 'Сбор гостей', desc: 'Встреча в панорамном кафе' },
+                  { time: '14:30', title: 'Церемония', desc: 'Торжественная часть и поздравления' },
+                  { time: '17:00', title: 'Банкет', desc: 'Ужин, танцы и веселье' }
+                ].map((event, i) => (
+                  <div key={i} className="space-y-2">
+                    <div className="text-3xl font-serif italic text-accent">{event.time}</div>
+                    <h3 className="text-xl font-serif italic text-primary">{event.title}</h3>
+                    <p className="text-sm font-serif italic text-muted-foreground">{event.desc}</p>
+                    {i < 2 && <div className="w-12 h-px bg-accent/30 mx-auto mt-4"></div>}
                   </div>
                 ))}
               </div>
             </section>
 
-            <div className="border-t border-muted my-8"></div>
+            <section className="text-center space-y-8 animate-fade-in-up">
+              <h2 className="text-5xl font-serif italic text-primary">
+                подтвердите<br/>присутствие
+              </h2>
+              
+              <Card className="bg-white/60 backdrop-blur-sm border-none shadow-lg p-8 mx-4">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <Label className="text-sm font-serif italic text-muted-foreground">Ваше имя</Label>
+                    <Input
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="border-b border-t-0 border-l-0 border-r-0 rounded-none px-0 bg-transparent focus-visible:ring-0 font-serif italic"
+                      required
+                    />
+                  </div>
 
-            <footer className="text-center space-y-4">
-              <p className="text-xs text-muted-foreground">До скорой встречи!<br />С любовью,</p>
-              <h3 className="text-4xl font-script text-accent">
-                Вероника & Руслан
-              </h3>
-            </footer>
+                  <div>
+                    <Label className="text-sm font-serif italic text-muted-foreground block mb-3">
+                      Я буду присутствовать
+                    </Label>
+                    <div className="flex gap-6 justify-center">
+                      {['Да', 'Нет'].map((option) => (
+                        <label key={option} className="flex items-center gap-2 cursor-pointer">
+                          <div 
+                            onClick={() => setFormData({ ...formData, attending: option })}
+                            className={`w-5 h-5 rounded-full border flex items-center justify-center ${
+                              formData.attending === option ? 'border-accent' : 'border-muted'
+                            }`}
+                          >
+                            {formData.attending === option && (
+                              <div className="w-2.5 h-2.5 rounded-full bg-accent"></div>
+                            )}
+                          </div>
+                          <span className="text-sm font-serif italic">{option}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <Label className="text-sm font-serif italic text-muted-foreground">Количество гостей</Label>
+                    <Input
+                      type="number"
+                      min="1"
+                      value={formData.guests}
+                      onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
+                      className="border-b border-t-0 border-l-0 border-r-0 rounded-none px-0 bg-transparent focus-visible:ring-0 font-serif italic"
+                      required
+                    />
+                  </div>
+
+                  <Button 
+                    type="submit"
+                    className="w-full bg-accent hover:bg-accent/90 text-white text-sm py-6 font-serif italic"
+                  >
+                    Подтвердить
+                  </Button>
+                </form>
+              </Card>
+            </section>
+
+            <section className="text-center space-y-6 animate-fade-in-up px-4">
+              <div className="grid grid-cols-4 gap-3">
+                {[
+                  { value: countdown.days, label: 'дней' },
+                  { value: countdown.hours, label: 'часов' },
+                  { value: countdown.minutes, label: 'минут' },
+                  { value: countdown.seconds, label: 'секунд' }
+                ].map((item, i) => (
+                  <div key={i} className="text-center">
+                    <div className="text-4xl font-serif italic text-accent mb-2">{item.value}</div>
+                    <div className="text-xs font-serif italic text-muted-foreground">{item.label}</div>
+                  </div>
+                ))}
+              </div>
+              <p className="text-2xl font-script text-accent mt-8">С любовью,<br/>Вероника & Руслан</p>
+            </section>
 
           </div>
-        </Card>
+        </div>
+      </div>
+
+      <div className="absolute bottom-0 left-0 w-64 h-64 opacity-30 transform rotate-180">
+        <img 
+          src="https://cdn.poehali.dev/files/23d32ef6-bdbf-40f0-ad77-fc54cc40938e.png"
+          alt=""
+          className="object-contain"
+        />
+      </div>
+      <div className="absolute bottom-0 right-0 w-64 h-64 opacity-30 transform scale-x-[-1] rotate-180">
+        <img 
+          src="https://cdn.poehali.dev/files/23d32ef6-bdbf-40f0-ad77-fc54cc40938e.png"
+          alt=""
+          className="object-contain"
+        />
       </div>
     </div>
   );
