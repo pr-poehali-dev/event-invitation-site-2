@@ -39,23 +39,8 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#F5F1E8] to-[#EDE7DC] relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-64 h-64 opacity-40">
-        <img 
-          src="https://cdn.poehali.dev/files/e63b231a-87c4-41b1-be3e-1e2b03a0bb15.png"
-          alt=""
-          className="object-contain"
-        />
-      </div>
-      <div className="absolute top-0 right-0 w-64 h-64 opacity-40 transform scale-x-[-1]">
-        <img 
-          src="https://cdn.poehali.dev/files/e63b231a-87c4-41b1-be3e-1e2b03a0bb15.png"
-          alt=""
-          className="object-contain"
-        />
-      </div>
-      
-      <div className="relative z-10 flex items-center justify-center min-h-screen p-4">
+    <div className="min-h-screen bg-gradient-to-b from-[#F5F1E8] to-[#EDE7DC]">
+      <div className="flex items-center justify-center min-h-screen p-4">
         <div className="w-full max-w-lg mx-auto">
           <div className="space-y-16 py-12">
             
@@ -224,21 +209,6 @@ const Index = () => {
 
           </div>
         </div>
-      </div>
-
-      <div className="absolute bottom-0 left-0 w-64 h-64 opacity-30 transform rotate-180">
-        <img 
-          src="https://cdn.poehali.dev/files/23d32ef6-bdbf-40f0-ad77-fc54cc40938e.png"
-          alt=""
-          className="object-contain"
-        />
-      </div>
-      <div className="absolute bottom-0 right-0 w-64 h-64 opacity-30 transform scale-x-[-1] rotate-180">
-        <img 
-          src="https://cdn.poehali.dev/files/23d32ef6-bdbf-40f0-ad77-fc54cc40938e.png"
-          alt=""
-          className="object-contain"
-        />
       </div>
     </div>
   );
