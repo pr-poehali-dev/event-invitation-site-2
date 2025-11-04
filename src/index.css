@@ -117,4 +117,28 @@
     font-style: italic;
     font-weight: 300;
   }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+      opacity: 0.2;
+    }
+    25% {
+      transform: translate(20px, -30px) rotate(90deg);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translate(-10px, -60px) rotate(180deg);
+      opacity: 0.15;
+    }
+    75% {
+      transform: translate(30px, -40px) rotate(270deg);
+      opacity: 0.25;
+    }
+  }
+
+  .animate-float {
+    animation: float 20s ease-in-out infinite;
+  }
 }

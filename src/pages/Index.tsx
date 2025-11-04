@@ -39,8 +39,31 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#F5F1E8] to-[#EDE7DC]">
-      <div className="flex items-center justify-center min-h-screen p-4">
+    <div className="min-h-screen bg-gradient-to-b from-[#F5F1E8] to-[#EDE7DC] relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute animate-float opacity-20"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${i * 2}s`,
+              animationDuration: `${15 + Math.random() * 10}s`
+            }}
+          >
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+              <circle cx="30" cy="15" r="8" fill="#8A9A7B" opacity="0.6"/>
+              <circle cx="15" cy="30" r="8" fill="#8A9A7B" opacity="0.6"/>
+              <circle cx="45" cy="30" r="8" fill="#8A9A7B" opacity="0.6"/>
+              <circle cx="30" cy="45" r="8" fill="#8A9A7B" opacity="0.6"/>
+              <circle cx="30" cy="30" r="6" fill="#5F7161" opacity="0.8"/>
+            </svg>
+          </div>
+        ))}
+      </div>
+      
+      <div className="relative z-10 flex items-center justify-center min-h-screen p-4">
         <div className="w-full max-w-lg mx-auto">
           <div className="space-y-16 py-12">
             
